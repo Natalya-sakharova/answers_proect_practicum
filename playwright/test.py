@@ -6,7 +6,7 @@ def test_page_loads_and_has_title(page: Page):
     page.goto("http://localhost:8050/")
     
     # Проверка основного заголовка
-    expect(page.locator("text=Список процессоров")).to_be_visible()
+    expect(page.locator("text=Продажи шоколада")).to_be_visible()
     
     # Проверка наличия графика
     graph = page.locator("#graph")
@@ -25,15 +25,15 @@ def test_dropdown_interaction(page: Page):
     
     # Проверяем выбранное значение по умолчанию
     selected_value = page.locator("#graph-dropdown .Select-value-label")
-    expect(selected_value).to_have_text("vendor")
+    expect(selected_value).to_have_text("country")
     
     # Меняем значение и проверяем обновление
     dropdown.click()
-    page.locator(".VirtualizedSelectOption", has_text="type").click()
+    page.locator(".VirtualizedSelectOption", has_text="product").click()
     
     # Проверяем новое выбранное значение
     updated_value = page.locator("#graph-dropdown .Select-value-label")
-    expect(updated_value).to_have_text("type")
+    expect(updated_value).to_have_text("product")
 
 def test_data_table_visibility(page: Page):
     """Проверяем отображение таблицы с данными"""
