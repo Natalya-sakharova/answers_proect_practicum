@@ -10,7 +10,7 @@ class CSVRenderer(BaseRenderer):
 
     def render(self, data, media_type=None, renderer_context=None):
         response = HttpResponse(content_type='text/csv')
-        response['Content-Disposition'] = 'attachment; filename="products.csv"'
+        response['Content-Disposition'] = 'attachment; filename="sales.csv"'
 
         if not data:
             return response

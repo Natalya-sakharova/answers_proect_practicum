@@ -21,7 +21,7 @@ def fetch_hardware_data():
         
         df = pd.read_csv(StringIO(response.text))
         # Преобразуем дату в datetime для лучшей сортировки
-        df['release_date'] = pd.to_datetime(df['release_date'])
+        df['date'] = pd.to_datetime(df['date'])
         print(f"Успешно загружено {len(df)} записей")
         return df
         
@@ -34,11 +34,11 @@ df = fetch_hardware_data()
 
 # App layout
 app.layout = [
-    html.Div(children='Список процессоров'),
+    html.Div(children='Продажи шоколада'),
     dcc.Dropdown(
         id='graph-dropdown',
         options=[{'label': column, 'value': column} for column in df.columns],
-        value='vendor',  # Значение по умолчанию
+        value='country',  # Значение по умолчанию
         placeholder="Выберите характеристику"
     ),
     dcc.Graph(

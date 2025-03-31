@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Product
+from .models import Sales
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = [field.name for field in Product._meta.get_fields()]  # Какие поля показывать
-    search_fields = ("product", "type")  # Поля для поиска
-    list_filter = ("type", "release_date")  # Фильтры сбоку
+@admin.register(Sales)
+class SalesAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Sales._meta.get_fields()]  # Какие поля показывать
+    search_fields = ("country", "product")  # Поля для поиска
+    list_filter = ("date", "amount")  # Фильтры сбоку
 
 # Или без декоратора:
-# admin.site.register(Product, ProductAdmin)
+# admin.site.register(Sales, SalesAdmin)

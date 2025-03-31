@@ -2,6 +2,8 @@
 `source ./venv/bin/activate`
 # установка зависимостей
 `pip install -r requirements.txt`
+# запуск докера
+`docker-compose up --build`
 # запуск тестирования (c активированным, который в папке playwright)
 `pytest test.py`
 # запуск locust (c активированным venv, который в папке locust)

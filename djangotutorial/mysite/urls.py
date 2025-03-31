@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from django.urls import path
 from polls.views import QuestionListView, VoteView
-from chocolate.views import ProductsListView
+from chocolate.views import SalesListView
 
 
 # API Root View (Отображает все маршруты в /)
@@ -30,5 +30,5 @@ urlpatterns = [
     # path('api-auth/', include('rest_framework.urls')),
     # JSON: http://127.0.0.1:8000/api/chocolate/
     # CSV: http://127.0.0.1:8000/api/chocolate/?format=csv
-    path('api/chocolate/', ProductsListView.as_view(), name='chocolate')
+    path('api/chocolate/', SalesListView.as_view(), name='chocolate')
 ]

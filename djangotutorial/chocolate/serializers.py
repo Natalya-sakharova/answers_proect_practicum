@@ -1,12 +1,10 @@
 from rest_framework import serializers
-from chocolate.models import Product
+from chocolate.models import Sales
 
 class ChocolateSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Product
+        model = Sales
         fields = [
-            'id', 'product', 'type', 'release_date', 
-            'foundry', 'vendor', 'process_size', 
-            'tdp', 'die_size', 'transistors', 'freq',
-            'fp16_gflops', 'fp32_gflops', 'fp64_gflops'
+            'id', 'sales_person', 'country', 'product', 
+            'date', 'amount', 'boxes_shipped'
         ]
