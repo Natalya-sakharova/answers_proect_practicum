@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from cpus.models import Product
+from chocolate.models import Product
 
-class CpusSerializer(serializers.ModelSerializer):
+class ChocolateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = [

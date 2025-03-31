@@ -20,7 +20,7 @@ class Product(models.Model):
 
 
     class Meta:
-        db_table = "cpus_products"  # Задаёт имя таблицы (необязательно)
+        db_table = "chocolate_products"  # Задаёт имя таблицы (необязательно)
         verbose_name = "Процессор"
         verbose_name_plural = "Процессоры"
 

@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 from decimal import Decimal
 from django.core.management.base import BaseCommand
-from cpus.models import Product
+from chocolate.models import Product
 class Command(BaseCommand):
     help = "Импорт данных из CSV-файла в модель Product"
 

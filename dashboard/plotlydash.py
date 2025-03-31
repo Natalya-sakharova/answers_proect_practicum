@@ -10,8 +10,8 @@ import plotly.express as px
 app = Dash()
 
 # Используем имя сервиса из docker-compose
-API_URL = 'http://django:8000/api/cpus/'
-# API_URL = 'http://127.0.0.1:8000/api/cpus/'
+API_URL = 'http://django:8000/api/chocolate/'
+# API_URL = 'http://127.0.0.1:8000/api/chocolate/'
 
 def fetch_hardware_data():
     try:
